@@ -1,0 +1,11 @@
+nnef.cpp
+setup.py
+nnef/__init__.py
+nnef/binary.py
+nnef/parser.py
+nnef/printer.py
+nnef/shapes.py
+nnef.egg-info/PKG-INFO
+nnef.egg-info/SOURCES.txt
+nnef.egg-info/dependency_links.txt
+nnef.egg-info/top_level.txt
