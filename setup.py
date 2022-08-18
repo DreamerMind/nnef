@@ -17,36 +17,38 @@ import shutil
 import os
 
 
-if os.path.exists('build'):
-    shutil.rmtree('build')
-if os.path.exists('dist'):
-    shutil.rmtree('dist')
-if os.path.exists('nnef.egg-info'):
-    shutil.rmtree('nnef.egg-info')
+if os.path.exists("build"):
+    shutil.rmtree("build")
+if os.path.exists("dist"):
+    shutil.rmtree("dist")
+if os.path.exists("nnef.egg-info"):
+    shutil.rmtree("nnef.egg-info")
 
 
-module = Extension('_nnef',
-                   sources=['nnef.cpp'],
-                   include_dirs=['../cpp/include'],
-                   language='c++',
-                   extra_compile_args=['-std=c++11'])
+module = Extension(
+    "_nnef",
+    sources=["nnef.cpp"],
+    include_dirs=["./cpp/include"],
+    language="c++",
+    extra_compile_args=["-std=c++11"],
+)
 
-setup(name='nnef',
-      version='0.3',
-      description='A package for parsing NNEF files',
-      url='https://github.com/KhronosGroup/NNEF-Tools',
-      author='Viktor Gyenes',
-      author_email='viktor.gyenes@aimotive.com',
-      license='Apache 2.0',
-      classifiers=
-      [
-          'Development Status :: 4 - Beta',
-          'Intended Audience :: Developers',
-          'License :: OSI Approved :: Apache Software License',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 3',
-      ],
-      keywords='nnef',
-      packages=['nnef'],
-      ext_modules=[module]
-      )
+setup(
+    name="nnef",
+    version="0.3",
+    description="A package for parsing NNEF files",
+    url="https://github.com/KhronosGroup/NNEF-Tools",
+    author="Viktor Gyenes",
+    author_email="viktor.gyenes@aimotive.com",
+    license="Apache 2.0",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
+    ],
+    keywords="nnef",
+    packages=["nnef"],
+    ext_modules=[module],
+)
